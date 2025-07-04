@@ -59,7 +59,7 @@ export default function Home() {
   if (!hasSearched) {
     return (
       <main className="min-h-screen flex flex-col items-center justify-center px-2 bg-transparent">
-        <div className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
+        <div className="flex flex-col items-center justify-center w-full mx-auto">
           {/* Logo */}
           <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center shadow-lg mb-3">
             <span className="text-3xl font-black text-white drop-shadow-lg select-none">S</span>
