@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Form from "@/components/Form";
 import ProjectResult from "@/components/ProjectResult";
 import PromptBuilder from "@/components/PromptBuilder";
@@ -65,9 +65,9 @@ export default function Home() {
             <span className="text-3xl font-black text-white drop-shadow-lg select-none">S</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white drop-shadow-[0_2px_16px_rgba(59,130,246,0.5)] tracking-tight mb-4 text-center">Sidegen.dev</h1>
-          <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg mb-8 text-center max-w-2xl">Trouve ton prochain side project en un clic, grâce à l'<span className="text-blue-500 font-bold">IA</span>.</p>
+          <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg mb-8 text-center max-w-2xl">Trouve ton prochain side project en un clic, grâce à l&apos;<span className="text-blue-500 font-bold">IA</span>.</p>
           <div className="flex justify-center">
-            <div className="max-w-2xl w-full mx-auto">
+            <div className="w-full mx-auto">
               <Form onGenerate={handleGenerate} loading={loading} compact={true} />
               {error && <div className="mt-4 text-blue-400 text-center font-semibold drop-shadow">{error}</div>}
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
             <span className="text-lg font-black text-white drop-shadow-lg select-none">S</span>
           </div>
           <span className="hidden md:inline-block text-2xl md:text-3xl font-bold text-white tracking-tight">Sidegen.dev</span>
-          <span className="hidden md:inline-block mx-4 text-base md:text-lg text-white font-medium drop-shadow text-center">Trouve ton prochain side project en un clic, grâce à l'<span className="text-blue-500 font-bold">IA</span>.</span>
+          <span className="hidden md:inline-block mx-4 text-base md:text-lg text-white font-medium drop-shadow text-center">Trouve ton prochain side project en un clic, grâce à l&apos;<span className="text-blue-500 font-bold">IA</span>.</span>
         </div>
       </nav>
       {/* BANDEAU CRITERES (formulaire compact) */}

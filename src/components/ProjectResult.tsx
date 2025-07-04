@@ -35,7 +35,7 @@ export default function ProjectResult({ project }: { project: Project }) {
         <div className="mb-6">
           <span className="font-semibold text-white">Roadmap :</span>
           <ol className="mt-4 space-y-4 relative border-l-4 border-blue-500 pl-6">
-            {project.roadmap.map((step, i) => (
+            {project.roadmap.map((step) => (
               <li key={step.session} className="group relative">
                 <span className="absolute -left-3 top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-white/10 shadow-lg group-hover:scale-110 transition-transform"></span>
                 <div className="bg-gray-800/80 backdrop-blur-md rounded-xl px-4 py-3 shadow-inner border border-white/10">

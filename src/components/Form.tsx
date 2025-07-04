@@ -66,41 +66,45 @@ export default function Form({ onGenerate, loading, compact = false, initialValu
   if (compact) {
     // Affichage horizontal compact
     return (
-      <form onSubmit={handleSubmit} className="w-full flex flex-col md:flex-row gap-2 md:gap-4 items-end flex-wrap md:flex-nowrap overflow-visible">
-        <div className="flex flex-col flex-1">
-          <label className="text-xs text-white font-semibold mb-1" htmlFor="language-select">Langage</label>
-          <select id="language-select" name="language" value={values.language} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 flex-1">
-            {LANGUAGES.map((lang) => <option key={lang} value={lang}>{lang}</option>)}
-          </select>
-        </div>
-        <div className="flex flex-col flex-1">
-          <label className="text-xs text-white font-semibold mb-1" htmlFor="level-select">Niveau</label>
-          <select id="level-select" name="level" value={values.level} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 flex-1">
-            {LEVELS.map((lvl) => <option key={lvl} value={lvl}>{lvl}</option>)}
-          </select>
-        </div>
-        <div className="flex flex-col flex-1">
-          <label className="text-xs text-white font-semibold mb-1" htmlFor="time-select">Temps</label>
-          <select id="time-select" name="time" value={values.time} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 flex-1">
-            {TIMES.map((t) => <option key={t} value={t}>{t}</option>)}
-          </select>
-        </div>
-        <div className="flex flex-col flex-1">
-          <label className="text-xs text-white font-semibold mb-1" htmlFor="goal-select">Objectif</label>
-          <select id="goal-select" name="goal" value={values.goal} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 flex-1">
-            {GOALS.map((g) => <option key={g} value={g}>{g}</option>)}
-          </select>
-        </div>
-        <div className="flex flex-col flex-1">
-          <label className="text-xs text-white font-semibold mb-1" htmlFor="type-select">Type</label>
-          <select id="type-select" name="type" value={values.type} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 flex-1">
-            {TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
-          </select>
-        </div>
-        <button type="submit" disabled={loading} className="flex-1 bg-blue-500 text-white font-bold px-4 py-3 rounded-lg shadow hover:bg-blue-600 transition-all duration-150 disabled:opacity-60 h-12 md:mt-0 mt-0">
-          {loading ? "..." : "Générer"}
-        </button>
-      </form>
+      <div className="w-full max-w-4xl mx-auto">
+        <form onSubmit={handleSubmit} className="w-full">
+          <div className="flex flex-col md:flex-row w-full gap-2 md:gap-4 items-end">
+            <div className="flex flex-col md:flex-1 w-full">
+              <label className="text-xs text-white font-semibold mb-1" htmlFor="language-select">Langage</label>
+              <select id="language-select" name="language" value={values.language} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 w-full">
+                {LANGUAGES.map((lang) => <option key={lang} value={lang}>{lang}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col md:flex-1 w-full">
+              <label className="text-xs text-white font-semibold mb-1" htmlFor="level-select">Niveau</label>
+              <select id="level-select" name="level" value={values.level} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 w-full">
+                {LEVELS.map((lvl) => <option key={lvl} value={lvl}>{lvl}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col md:flex-1 w-full">
+              <label className="text-xs text-white font-semibold mb-1" htmlFor="time-select">Temps</label>
+              <select id="time-select" name="time" value={values.time} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 w-full">
+                {TIMES.map((t) => <option key={t} value={t}>{t}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col md:flex-1 w-full">
+              <label className="text-xs text-white font-semibold mb-1" htmlFor="goal-select">Objectif</label>
+              <select id="goal-select" name="goal" value={values.goal} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 w-full">
+                {GOALS.map((g) => <option key={g} value={g}>{g}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col md:flex-1 w-full">
+              <label className="text-xs text-white font-semibold mb-1" htmlFor="type-select">Type</label>
+              <select id="type-select" name="type" value={values.type} onChange={handleChange} className="rounded-lg px-4 py-3 text-sm bg-white text-gray-900 border border-blue-500 focus:ring-blue-500 focus:border-blue-500 h-12 w-full">
+                {TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+              </select>
+            </div>
+            <button type="submit" disabled={loading} className="bg-blue-500 text-white font-bold px-4 py-3 rounded-lg shadow hover:bg-blue-600 transition-all duration-150 disabled:opacity-60 h-12 w-full md:w-32 md:mt-0 mt-2">
+              {loading ? "..." : "Générer"}
+            </button>
+          </div>
+        </form>
+      </div>
     );
   }
 
